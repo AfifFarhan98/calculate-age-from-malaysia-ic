@@ -1,0 +1,16 @@
+<?php
+    //ic number input
+    $ic="000526095187";
+    if ($ic!=NULL && ctype_digit($ic) && strlen($ic)==12){
+        $year=substr($ic,0,2);//extract digit 1 and 2
+
+        if($year > date("y")){
+            $year = $year + 1900;
+        }else{
+            $year = $year + 2000;
+        }
+
+        $age = date("Y") - $year;
+        echo $age;
+        }
+?>
